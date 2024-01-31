@@ -9,3 +9,17 @@ data1 = {
 dataFrame = pd.DataFrame(data=data1)
 print(type(dataFrame))
 print(dataFrame)
+
+age = dataFrame["Age"]
+gender = dataFrame["Name"]
+
+print(type(age), type(gender))
+
+print(age,"\n",gender)
+
+marks = [90, 98, 100, 67, 50]
+
+mark = pd.Series(marks)
+print(mark)
+print(type(mark))
+
