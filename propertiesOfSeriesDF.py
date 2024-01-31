@@ -1,5 +1,12 @@
 import pandas as pd
 
+brics = {
+    "country" : ["Brazil", "Russia", "India", "China", "South Africa"],
+    "capital" : ["Brasilia", "Moscow", "New Delhi", "Beijing", "Pretoria"],
+    "area" : [8.516, 17.10, 3.286, 9.67, 2.98]
+    
+}
+
 info = {
     "Name" : "Shoyeb",
     "Marks" : [91, 86, 78, 90, 98.45, 91.24, 100, 23.43]
@@ -14,11 +21,19 @@ avg = info1["Marks"].mean()
 
 print("Maximum:", MaxMarks, "Minimum:", MinMarks, "Average:",avg)
 
+population = [200.4, 143.5, 1252, 133, 4.3]
+
+ser = pd.Series(population)
+print("Average:",ser.mean()) 
+print("Mini:",ser.min()) 
+print("Max:",ser.max()) 
 # descriptive statistics
 
 ds = info1.describe()
+print("descriptive Analysis of Data Frame")
 print(ds)
-
+print("descriptive Analysis of series")
+print(ser.describe())
 
 # shape property
 print("(Rows, columns) = ",info1.shape)
@@ -35,11 +50,3 @@ print(info1)
 info1.index = list(range(2, 18, 2))
 print(info1)
 
-# brics = {
-# "country" = ["Brazil", "Russia", "India", "China", "South Africa"],
-# "capital" = ["Brasilia", "Moscow", "New Delhi", "Beijing", "Pretoria"]
-
-
-# }
-area = [8.516, 17.10, 3.286, 9.67, 2.98]
-population = [200.4, 143.5, 1252, 133, 4.3]
