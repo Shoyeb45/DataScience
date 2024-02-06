@@ -8,7 +8,7 @@ print(data)
 print(data.head(6))
 
 # 2. tail - returns the last n rows of data set
-print(data.tail(54))
+print(data.tail(5))
 
 # seeing number of rows
 print(data.shape)
