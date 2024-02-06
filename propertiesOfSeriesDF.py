@@ -50,3 +50,6 @@ print(info1)
 info1.index = list(range(2, 18, 2))
 print(info1)
 
+# RESETTING INDEX
+
+print(info1.reset_index())
