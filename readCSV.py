@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+
 
 data = pd.read_csv('vgsalesGlobale.csv')
 
@@ -30,3 +32,23 @@ print(data.JP_Sales.describe())
 
 # value count - count of unique value
 print("\n",data.Genre.value_counts())
+print(f"\n{data.Platform.value_counts()}")
+
+print(f"Using Normalization\n{data.Platform.value_counts(normalize=True)}")
+
+# cross Tab
+
+print(f"{pd.crosstab(data['Platform'], data['Year'])}")
+
+df = pd.DataFrame({
+    'gender': ['male', 'male', 'female', 'female', 'male', 'female', 'male', 'female'],
+    'education_level': ['high school', 'college', 'college', 'graduate', 'high school', 'graduate', 'college', 'graduate'],
+    'score': [75, 82, 88, 95, 69, 92, 78, 85]
+})
+
+print(df)
+print(f"{pd.crosstab}")
+
+a = pd.crosstab(df['gender'], df['score'])
+p = a.plot(kind="bar", stacked=False)
+plt.show()
