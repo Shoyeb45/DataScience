@@ -27,5 +27,7 @@ print(l)
 # 4. drop
 print(brics)
 print("Labels")
-brics.drop(labels = ["country"], axis = 1, inplace=True)
-print(brics)
+x = brics.drop(labels = [0], axis = 0 )    # as inplace is false (by default). so it will not update the df
+brics.drop(labels = ["population"], axis = 1, inplace=True)
+print(brics)    # deletes column population
+print(x)    # deletes row 0
