@@ -1,32 +1,19 @@
 import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use("dark_background")
 
-arr1 = np.arange(2, 20, 2).reshape((3, 3))
-arr2 = np.arange(1, 19, 2).reshape((3, 3))
-print(f"Original arrays\narr1\n{arr1}\narr2\n{arr2}\n")
-# addition
-print("Addition\n",arr1+arr1)
-print(np.add(arr1, arr2))
+# print(np.pi)
+Pi = np.pi
+# sine function
+print(f"Example of sine value : \nsin(pi/2) = {np.sin(Pi/2)}\t\tsin(pi/3) = {np.sin(np.sin(Pi/3))}")
 
-# subtraction
-print("Subtraction\n",arr1 - arr2)
-print(np.subtract(arr1, arr2))
+# plot
+x = np.arange(0, 2*Pi, 0.1)  # all numbers from 0 to 2pi, with 0.1 step
+sineValue = np.sin(x)        # value of sinx by provididng x
 
-# multiplication - each element
-print(f"Multiplication\n{arr1 * arr2}")
-print(np.multiply(arr1, arr2))
+plt.figure(figsize= (6, 6))   # figure size
+plt.plot( x, sineValue)
+plt.title("Sine curve")
+plt.show()
 
-# divide
-print(f"Division\n{arr1 / arr2}")
-print(f"{np.divide(arr1, arr2)}")
 
-# matrix multiplication
-print(f"Matrix Multiplication\n{arr1 @ arr2}")
-print(np.dot(arr1, arr2))
-
-# max and min in array
-print(f"Maximum in arr2 : {arr2.max()} and Minimum in arr2 : {arr2.min()}")
-print(f"Maximum in arr1 : {arr1.max()} and Minimum in arr1 : {arr1.min()}")
-
-# max and min element's index in array
-print(f"Index of Maximum element in arr2 : {arr2.argmax()} and Index of Minimum element in arr2 : {arr2.argmin()}")
-print(f"Index of Maximum in arr1 : {arr1.argmax()} and Index of Minimum element in arr1 : {arr1.argmin()}")
