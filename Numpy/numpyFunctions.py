@@ -23,3 +23,22 @@ p = np.zeros((2,2), dtype=str)
 print(f"Data type as string \n{p}")
 p = np.zeros((2, 3), dtype=bool)
 print(f"Data type as boolean \n{p}")
+print()
+
+# arange
+p = np.arange(1, 101, 1)
+print(p)
+
+# rehshape
+p = p.reshape((10, 10))    
+print(p)
+
+# ravel
+p = p.ravel()
+print(p)
+
+# flatten
+o = np.arange(200, 250, 2)
+o = o.reshape((5, 5))
+o = o.flatten()
+print(o)
