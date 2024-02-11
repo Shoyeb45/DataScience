@@ -16,7 +16,7 @@ df.index = list(range(1, 8, 1))
 print(df)
 
 # loc
-print(df.loc[:, ["gender", "name"]])
+print(df.loc[:, ["gender", "name6"]])
 
 # iloc
 u = df.iloc[0:3, 0:2]
