@@ -1,6 +1,8 @@
 import pandas as pd
 
+# link from raw file of github
 df = pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
+
 
 print(df)
 
