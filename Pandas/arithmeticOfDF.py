@@ -14,8 +14,8 @@ df2=pd.DataFrame(
     index=["Tim","Kate","Tom"]) 
 
 # addition
-print(s1+s2) # if the data is only present in one df, then it will give nan
+print(s1 + s2) # if the data is only present in one df, then it will give nan
 # nan + number = nan
-print(df1+df2)
+print(df1 + df2)
 
 
