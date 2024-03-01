@@ -34,5 +34,21 @@ where region like "%EA";
 
 -- using _ operator
 
-select
+select region, age, gender
+from students
+where gender like "_ale";
+
+-- NOT LIKE keyword
+select inter_dom, age, age_cate, academic
+from students
+where academic not like "%Gr%"; 
+
+-- In keyword
+select academic, age, region
+from students
+where age in (24, 28, 31, 19); 
+
+-- Distinct Keyword
+select distinct Category
+from product;
 
