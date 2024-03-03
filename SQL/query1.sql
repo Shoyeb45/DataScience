@@ -52,3 +52,11 @@ where age in (24, 28, 31, 19);
 select distinct Category
 from product;
 
+-- ordering the result
+SELECT DISTINCT category
+FROM Product
+ORDER BY category;
+
+SELECT DISTINCT category
+FROM Product
+ORDER BY category Desc;
