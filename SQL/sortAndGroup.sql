@@ -8,6 +8,7 @@ select section, physics
 from sample2
 order by Physics;
 
+
 -- Group by  
 
 select section, sum(maths) as MathsMarks
@@ -21,6 +22,7 @@ group by Branch;
 select  section, avg(maths) as Maths, avg(Physics) as Physics, avg(Computer) as Computer, avg(Chemistry) as Chem
 from sample2
 group by section;
+
 
 -- having
  
@@ -55,4 +57,21 @@ group by stay
 order by stay desc;
 
 
+select count(branch)
+from sample2;
 
+select count(section)
+from sample2;
+
+use connect;
+select * from pwskills;
+insert into pwskills values ("Najma", "", 0);
+select count(subject)
+from pwskills;
+
+select branch, avg(physics) as avgPhy
+from sample2
+group by branch;
+select branch,max(chemistry)
+from sample2
+group by branch;
