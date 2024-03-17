@@ -22,7 +22,7 @@ print(pd.merge(df1, df2))
 # using how
 print(f"how = left\n{pd.merge(df1, df2, on="Roll No.", how="left")}")
 print(f"how = right\n{pd.merge(df1, df2, on="Roll No.", how="right")}")
-
+# print(f"how=inner\n{pd.merge(df1, df2, on="Roll No.", how="outer")}")
 # outer
 
 print(f"how = outer\n{pd.merge(df1, df2, on="Roll No.", how="outer")}")
