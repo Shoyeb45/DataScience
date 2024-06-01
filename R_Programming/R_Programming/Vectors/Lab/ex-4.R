@@ -1,0 +1,5 @@
+set.seed(2342)
+nums <- rnorm(n = 100)
+req_index <- which(nums > -1.234 & nums < 0.7643)
+cat(req_index)
+cat("Sum of index", sum(req_index))
