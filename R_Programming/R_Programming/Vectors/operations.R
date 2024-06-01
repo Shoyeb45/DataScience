@@ -3,6 +3,10 @@ x <- c(3, 5, 6, 12 , 123)
 7 %in% x
 2*x
 y <- c(1, -2, 5, 8, 7)
- x + y
+x + y
 z <- c(1, 12) 
 # for unequal lengths - longer must be a multiple of shorter
+
+# Modulo operator
+
+print(9 %% 10)
