@@ -1,3 +1,5 @@
+# rep() function - 4 times:
+
 # replicate 1 element multiple time
 x <- rep(2, times = 324)
 x
