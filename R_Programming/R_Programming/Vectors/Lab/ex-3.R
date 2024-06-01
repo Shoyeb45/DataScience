@@ -1,0 +1,10 @@
+set.seed(3244)
+nums <- rnorm(n = 100)
+x1 <- round(nums, 1)
+x2 <- round(nums, 2)
+x3 <- round(nums, 3)
+x4 <- round(nums, 4)
+x5 <- round(nums, 5)
+mean_original <- mean(nums)
+MAD <- c(abs(mean_original - mean(x1)), abs(mean_original - mean(x2)), abs(mean_original - mean(x3)), abs(mean_original - mean(x4)), abs(mean_original - mean(x5)))
+MAD
