@@ -1,0 +1,18 @@
+set.seed(2342)
+nums <- rnorm(n = 200)
+mean(nums)
+sum(nums)
+min(nums)
+sd(nums)
+sqrt(nums[nums > 0])
+sort(nums)
+
+x = c(1,2,2,2,3,4,4,5,6,6,6,6,6, 8, 9)
+unique(x)
+h<-duplicated((x))
+h
+any(h)
+all(h)
+rev(x)
+x = c(9,3,1,2,2,3,421,4,234,1,3,4,524,5,2652)
+sort(x)
