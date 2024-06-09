@@ -24,4 +24,7 @@ hist(x1,
      ylab = "Frequency",
      col = "skyblue")
 
-# bo
+# boxplot
+x1 <- rnorm(1000, mean = 0, sd = 1)
+boxplot(x1) 
+summary(x1)
