@@ -9,12 +9,17 @@ gradingSystem <- function(x) {
     return ("D")
   } else if(x >= 50 & x <= 59) {
     return ("E")
-  } else {
+  } else if(x >= 40 & x <= 0){
     return ("F")
+  } else {
+    return ("Invalid marks!")
   }
+  
 }
 
 gradingSystem(43)
 gradingSystem(67)
-gradingSystem(43)
-gradingSystem(43)
+gradingSystem(89)
+gradingSystem(100)
+gradingSystem('A')
+gradingSystem(-1)
