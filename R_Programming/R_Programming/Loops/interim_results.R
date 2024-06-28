@@ -14,3 +14,8 @@ for (i in 1: length(num)) {
 prefix_sum
 mat <- matrix(1:5, nrow = 1)
 mat
+
+for (i in 2: 10) {
+  mat <- rbind(mat, mat[i - 1, ] * 2)
+}
+mat
