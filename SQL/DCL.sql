@@ -4,6 +4,8 @@ create user "shoyeb"@"localhost" identified by "abc";
 grant all privileges on *.* to "shoyeb"@"localhost";
 
 revoke all privileges on *.* from "shoyeb"@"localhost";
+grant all privileges on healthcare.* to 'shoyeb'@'localhost';
+revoke all privileges on healthcare.* from 'shoyeb'@'localhost';
 
 create database dhokha;
 use dhokha;
