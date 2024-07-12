@@ -38,10 +38,9 @@ SET SQL_SAFE_UPDATES = 0;
 -- update the data in doctor id
 update medical_records 
 set doctor_id = "D9"
-where patient_id = 4; 
+where id = 4; 
 
 select * from patients;
-
 
 update patients
 set full_name = "Nami", gender = "F"
