@@ -116,3 +116,36 @@ create table orderdetails (
     foreign key (productCode)
     references products(productCode)
 );
+
+insert into productlines(productLine, textDescription) values
+('Classic Cars', 'Cars from the 1950s and 1960s'),
+('Motorcycles', 'A range of motorcycles');
+
+describe products;
+insert into products values
+('S10_1678', '1969 Harley Davidson Ultimate Chopper', 'Motorcycles', '1:10', 'Min Lin Diecast', 'This replica features working kickstand, front suspension, gear-shift lever.', 7933, 48.81, 95.70);
+
+insert into offices values
+('1', 'San Francisco', '+1 650 219 4782', '100 Market Street', 'Suite 300', 'CA', 'USA', '94080', 'NA');
+
+insert into employee values
+(1002, 'Murphy', 'Diane', 'x5800', 'dmurphy@classicmodelcars.com', '1', NULL, 'President');
+insert into employee values
+(1370, 'Murphy', 'Cilian', 'x5800', 'dmurphy@classicmodelcars.com', '1', NULL, 'President');
+
+describe customers;
+insert into customers(customerNumber, customerName, contactLastName, contactFirstName, phone, addressLine1, addressLine2, city, state, country, salesRepEmployeeNumber, creditLimit) values
+(103, 'Atelier graphique', 'Schmitt', 'Carine', "012834",'40.32.2555', '54, rue Royale', "Paris", 'Nantes', 'France', 1370, 21000.00);
+
+describe orders;
+insert into orders values
+(10100, '2003-01-06', '2003-01-13', '2003-01-10', 'Shipped', "--", 103);
+
+insert into orderdetails values
+(10100, 'S10_1678', 30, 95.70, 1);
+
+insert into payments values
+(103, 'HQ336336', '2004-10-19', 6066.78);
+
+select * from customers;
+select * from products;
