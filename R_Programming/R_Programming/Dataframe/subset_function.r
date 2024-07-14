@@ -14,4 +14,3 @@ x
 y
 class(x)
 class(y)
-
