@@ -104,4 +104,4 @@ where categoryid = 2;
 
 -- set null reference
 
-drop table  
+ 
