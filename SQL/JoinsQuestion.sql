@@ -71,3 +71,7 @@ select customerName, country
 from customers;
 
 -- 9. Product Vendors: List all products along with their vendors, including product name and vendor name
+select * from products;
+select productName, productVendor
+
+
