@@ -53,17 +53,17 @@ Learning with a mentor/teacher using labeled datasets. The model learns to map i
 - **Goal:**
 Predict the best possible output for new inputs.
 - **Formalization:**
-    - Input space: \$ X \$ (e.g., images, vectors)
-    - Output space: \$ Y \$ (real numbers, classes)
-    - Dataset: \$ D = \{(x_i, y_i)\}_{i=1}^N \$
-    - Model: \$ f_\theta \$ (function with parameters $\theta$)
+    - Input space: $ X $ (e.g., images, vectors)
+    - Output space: $ Y $ (real numbers, classes)
+    - Dataset: $ D = \{(x_i, y_i)\}_{i=1}^N $
+    - Model: $ f_\theta $ (function with parameters $\theta$)
 - **Tasks:**
     - **Classification:**
 Predict discrete labels (e.g., spam vs. not spam).
     - **Regression:**
 Predict continuous values (e.g., predicting study hours from exam points).
 - **Examples:**
-    - Email spam filters: \$ X = \{mail texts\} \$, \$ Y = \{Spam, Not Spam\} \$
+    - Email spam filters: $ X = \{mail texts\} $, $ Y = \{Spam, Not Spam\} $
     - Regression: Predicting study hours from exam points.
 
 
@@ -75,7 +75,7 @@ Learning without labeled data. The model discovers patterns, clusters, or struct
 Find hidden patterns, groupings, or reduce data dimensionality.
 - **Formalization:**
     - Dataset: $ D = \{x_i\}_{i=1}^N $
-    - Model: $ f: \mathbb{R}^n \rightarrow \mathbb{R}^k $ (with $ k < n $)
+    - Model: $ f: \mathbb{R}^n  \rightarrow \mathbb{R}^k $ (with $ k < n $)
 - **Tasks:**
     - **Clustering:**
 Group similar data points (e.g., k-means clustering).
@@ -109,7 +109,7 @@ Convert categorical data into numerical/tensor forms for model compatibility.
     - **Label Encoding:**
 Assigns numbers to categories (e.g., Low=0, Medium=0.5, High=1).
     - **One-Hot Encoding:**
-Creates binary vectors for each category (e.g., Cat=[^1], Dog=[^1]).
+Creates binary vectors for each category (e.g., Cat=[0, 1], Dog=[, 01]).
 
 
 #### **B. Handling Missing Values**
@@ -133,6 +133,10 @@ Drop rows with too many missing values, then impute remaining.
 - **Formulas:**
     - **Min-Max Normalization:**
 $ x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}} $
+
+    - If we want to rescale to a different range [a, b], then the formula generalizes to
+     $ x' = a + \frac{(x - x_{\min})(b - a)}{x_{\max} - x_{\min}}$
+
     - **Z-score Standardization:**
 $ x' = \frac{x - \mu}{\sigma} $
 - **When Not to Use:**
@@ -187,7 +191,7 @@ Provides feedback to improve model parameters during training.
 
 | Aspect | Generative Models | Discriminative Models |
 | :-- | :-- | :-- |
-| What is modeled? | Joint probability $P(x, y)$ or $P(x)$ | Posterior probability $P(y, x)$ |
+| What is modeled? | Joint probability $P(x, y)$ or $P(x)$ | Posterior probability $P(y\|x)$ |
 | Approach | Learn data distribution (explicitly or implicitly) | Learn decision boundaries |
 | Data requirements | Can use labeled or unlabeled data | Require labeled data |
 | Training difficulty | Harder to train | Easier to train |
