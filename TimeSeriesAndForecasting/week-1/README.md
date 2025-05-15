@@ -12,7 +12,7 @@ A time series is a finite sequence of observations, denoted by $x_t$ or $x(t)$, 
 
 ### Discrete-time Time Series
   - Time is measured at countable time points.
-  - The time index set is typically $$T = \{t_1, t_2, \ldots, t_n\} \subset \mathbb{Z}$$.
+  - The time index set is typically, $T = \{t_1, t_2, \ldots, t_n\} \subset \mathbb{Z}$.
   - *Examples*: Daily stock prices, monthly sales data.
 
 ### Continuous-time Time Series
@@ -127,7 +127,7 @@ $$
 **4. Practical Example: US Employment Dataset**
 
 - Both additive and multiplicative decompositions can be applied to real-world data such as US employment figures.
-- The choice between additive and multiplicative models depends on whether seasonal and irregular variations are constant or proportional to the trend[1].
+- The choice between additive and multiplicative models depends on whether seasonal and irregular variations are constant or proportional to the trend.
 
 <p>
     <img src="./image/mdOfUSETS.png">
@@ -137,7 +137,7 @@ $$
 **5. Choosing Between Additive and Multiplicative Models**
 
 - **Additive:** Use when seasonal variation is roughly constant throughout the series.
-- **Multiplicative:** Use when seasonal variation increases or decreases with the trend[3].
+- **Multiplicative:** Use when seasonal variation increases or decreases with the trend.
 
 
 

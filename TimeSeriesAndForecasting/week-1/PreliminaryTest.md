@@ -40,7 +40,7 @@ $$
 
 ### **4. Derivation of Test Statistic**
 
-#### **Step 1: Expectation of τ Under $H_0$**
+#### **Step 1: Expectation of $\tau$ Under $H_0$**
 
 Under $H_0$, the ranks are randomly ordered. The expected number of concordant and discordant pairs is equal:
 
@@ -72,9 +72,13 @@ $$
 \text{Var}(\tau) = \frac{4 \cdot \text{Var}(S)}{[n(n-1)]^2} = \frac{2(2n + 5)}{9n(n - 1)}
 $$
 
+Hence, 
+$$
+\tau \sim \mathcal{N}(0, \frac{2(2n + 5)}{9n(n - 1)})
+$$
 #### **Step 3: Standard Error and Z-Score**
 
-For large $n$ ($n \geq 10$), τ approximately follows a normal distribution:
+For large $n$ ($n \geq 10$), $τ$ approximately follows a normal distribution:
 
 $$
 Z = \frac{\tau}{\sqrt{\text{Var}(\tau)}} \sim \mathcal{N}(0, 1)
@@ -217,6 +221,10 @@ $$
 
 ---
 
+##### Decision Rule
+
+Reject H0 if $ X \gt \chi_{r-1}^2 $
+
 ### **5. Step-by-Step Example**
 
 Suppose $c = 3$ (years), $r = 4$ (seasons), and the rank sums are $M_1 = 3$, $M_2 = 6$, $M_3 = 9$, $M_4 = 12$.
@@ -345,7 +353,7 @@ $$
 $$
 - **Covariance between $U_i$ and $U_j$:**
     - For adjacent triplets ($j = i+1$), overlapping points introduce dependency.
-    - After combinatorial analysis[^1], the variance is:
+    - After combinatorial analysis, the variance is:
 
 $$
 \text{Var}(p) = \frac{16n - 29}{90}
